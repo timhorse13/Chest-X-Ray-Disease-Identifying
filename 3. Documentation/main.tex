@@ -1,43 +1,131 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{geometry}
-\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{fancyhdr}
-\usepackage{setspace}
-\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz-timing}
+\usepackage{circuitikz}
+\usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{filecontents}
 
-\geometry{a4paper, left=30mm, right=25mm, top=25mm, bottom=25mm}
 
+
+
+\setlength{\headheight}{45.25728pt}
+\addtolength{\topmargin}{-33.25728pt}
+\addtolength{\topmargin}{-25.03186pt}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{Timofey Luzin, Felix Zauner}
-\fancyhead[R]{\today}
-\fancyfoot[C]{\thepage}
+\fancyhf{} % Leert Standard Kopf- und Fußzeilen
+
+
+
+% Fußlinie aktivieren (Stärke anpassen)
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Kopfzeile
+\fancyhead[L]{\includegraphics[width=2.5cm]{logo.png}}    % Logo links
+\fancyhead[C]{14.10.2025}                               % Datum in der Mitte
+\fancyhead[R]{Felix Zauner}                             % Platzhalter für Namen
+
+% Fußzeile
+\fancyfoot[L]{5AHETS}                                  % Klasse links
+\fancyfoot[C]{Labor}                                   % Mitte Labor
+\fancyfoot[R]{Seite \thepage}                          % Seitenzahl rechts
 
 \begin{document}
 
+% Titelseite
 \begin{titlepage}
-\centering
-\vspace*{1cm}
+    \centering
+    \vspace*{2cm}
+    % Logo auf Titelseite
+    \includegraphics[width=0.5\textwidth]{logo.png}
 
-{\Huge \textbf{Automatic classification of chest x-ray\\[0.1cm] images to detect pneumonia and\\[0.3cm]tuberculosis}}\\[1cm]
+    \vspace{1.5cm}
+    % Titel und Untertitel
+    \begin{minipage}{0.9\textwidth}
+        \centering
+        \Huge\textbf{Automatische Klassifikation von Thorax-Röntgenbildern zur Erkennung von Pneumonie und Tuberkulose}\\
+        \vspace{0.5cm}
+        
+    \end{minipage}
+    \Large Projektbericht
+    \vspace{1.5cm}
 
-{\Large Documentation}\\[8cm]
+    % Autoren
+    \textbf{Gruppe:}\\
+    Felix Zauner, Timofey Luzin\\
 
-\textbf{Authors:}\\[0.3cm]
-Timofey Luzin, Felix Zauner\\
-HTBLuVA Salzburg\\[5cm]
+    \vspace{0.5cm}
+
+    \textbf{Klasse \& Schuljahr:} \\ 5AHETS 2025/26
 
 
-{\Large \today}\\[1cm]
+    \vspace{0.5cm}
 
-\vfill
+    \textbf{Abgabe:} \\ 15.12.2025
 
 
 \end{titlepage}
 
 
+
+\tableofcontents
+
+\newpage
+\section{Einleitung}
+In diesem Projektbericht wird die Entwicklung eines Modells zur automatischen Klassifikation von Thorax-Röntgenbildern zur Erkennung von Pneumonie und Tuberkulose beschrieben. 
+\\
+Die KI-basierte Bildanalyse hat in den letzten Jahren erhebliche Fortschritte gemacht und bietet vielversprechende Möglichkeiten zur Unterstützung medizinischer Diagnosen.
+Manche Experten sehen in der automatischen Bildanalyse sogar das Potenzial, die Genauigkeit und Effizienz von Diagnosen zu verbessern, insbesondere in ressourcenarmen Umgebungen.
+\\
+Ziel dieses Projekts ist es, ein Modell zu entwickeln, das in der Lage ist, Thorax-Röntgenbilder zu analysieren und zwischen gesunden Patienten, Patienten mit Pneumonie und Patienten mit Tuberkulose zu unterscheiden.
+\\
+Der Bericht gliedert sich in mehrere Abschnitte, die den gesamten Entwicklungsprozess abdecken, von der Datensammlung und -aufbereitung über die Modellauswahl und das Training bis hin zur Evaluation des Modells.
+Abschließend werden die Herausforderungen und Probleme, die während des Projekts aufgetreten sind, sowie eine Reflexion über die Ergebnisse und mögliche zukünftige Verbesserungen diskutiert.
+
+
+\newpage
+
+\section{Datensatzbeschreibung}
+
+\newpage
+
+\section{Datenaufbereitung}
+
+\newpage
+
+\section{Modellauswahl und -training}
+\subsection{Modellauswahl}
+\subsection{Modelltraining}
+\subsection{Code-Dokumentation}
+\subsection{Probleme und Herausforderungen}
+
+\newpage
+
+\section{Evaluation des Modells}
+
+\newpage
+
+\section{Probleme und Herausforderungen im gesamten Projekt}
+\subsection{Technische Herausforderungen}
+\subsection{Modellierungsprobleme}
+
+\newpage
+
+\section{Schlussfolgerung und Reflexion}
+
+\newpage
+
+\section{Quellen und Literaturverzeichnis}
+
+\newpage
+
+\section{Anhang}
 
 \end{document}
