@@ -370,7 +370,14 @@ y_test = np.array(y_test)
 \newpage
 \subsection{Probleme und Herausforderungen}
 Die Ergebnisse sowohl bei MLP Classifier als auch bei SVM waren in unserem Fall unzureichend, mit einem F1 Score von nur etwa 0,7. Dies könnte auf verschiedene Faktoren zurückzuführen sein, darunter die Komplexität der Bilder, die begrenzte Größe des Datensatzes oder die Wahl der Modelle und Hyperparameter. \\
-Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu verwenden, da diese Modelle speziell für die Verarbeitung von Bilddaten entwickelt wurden und in der Regel bessere Ergebnisse bei der Bildklassifikation erzielen.
+Hingegen wäre die Verwendung eines Convolutional Neural Networks (CNN) eine bessere Wahl gewesen, da CNNs speziell für die Verarbeitung von Bilddaten entwickelt wurden.
+Ein CNN ist eine spezialisierte neuronale Netzwerkarchitektur, die mehrere Schichten umfasst:
+\begin{itemize}
+    \item \textbf{Convolutional Layer:} Diese Schichten wenden Filter (Kernel) auf die Eingabebilder an und extrahieren automatisch räumliche Merkmale wie Kanten, Texturen und Muster. Dies geschieht durch Faltungsoperationen, die lokale Bildbereiche analysieren.
+    \item \textbf{Pooling Layer:} Diese Schichten reduzieren die räumliche Dimension der Feature Maps, um Rechenzeit zu sparen und die Modellrobustheit zu verbessern. Max Pooling wählt den maximalen Wert aus einem Fenster, während Average Pooling den Durchschnittswert berechnet.
+    \item \textbf{Fully Connected Layer:} Nach mehreren Convolutional und Pooling Schichten folgen vollständig verbundene Schichten, die die extrahierten Merkmale für die Klassifikation nutzen.
+\end{itemize}
+Der Vorteil von CNNs liegt darin, dass sie Translationsinvarianz aufweisen (ein Merkmal wird erkannt, unabhängig davon, wo es im Bild auftritt) und hierarchische Merkmalsdarstellungen aufbauen. Dies macht sie ideal für medizinische Bildanalyse, wo subtile diagnostische Unterschiede erkannt werden müssen. Die schlechten Ergebnisse unserer bisherigen Modelle deuten darauf hin, dass MLP und SVM nicht in der Lage sind, die komplexen räumlichen Muster in Röntgenbildern ausreichend zu erfassen.
 \newpage
 
 \section{Evaluation des Modells}
