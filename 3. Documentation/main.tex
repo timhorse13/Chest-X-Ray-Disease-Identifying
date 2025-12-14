@@ -137,9 +137,10 @@ Abschließend werden die Herausforderungen und Probleme, die während des Projek
 
 \section{Datensatzbeschreibung}
 Der Datensatz stammt beinhaltet insgesamt 25.600 Thorax-Röntgenbilder, die in drei Klassen unterteilt sind: Gesunde Patienten, Patienten mit Pneumonie und Patienten mit Tuberkulose.
-Die Bilder sind schon in Trainings-, Validierungs- und Testsets aufgeteilt.
+Die Bilder sind schon in Trainings-, Validierungs- und Testsets aufgeteilt.\\
 In unserer Anwendung verwenden wir \textit{ausschließlich} das \textit{Trainingsset} und das \textit{Testset}.
 \\
+Insgesamt ist das Datenset 3.31 GB groß.\\
 Die Bilder liegen im JPEG-Format vor und haben keine standartisierte Auflösung.
 \\
 Hier ist eine Übersicht über die Struktur des Datensatzes dargestellt:
@@ -185,7 +186,10 @@ Hier eine Auswahl an Beispielbildern aus dem Datensatz in Abbildung 2.
     \caption{Beispielabbildung aus dem Datensatz}
     \label{fig:example_image_copy}
 \end{figure}
-Man kann bereits in diesem Auszug erkennen das die Bilder sehr unterschiedlich im Bezug auf Helligkeit, Kontrast und Bildausschnitt aussehen können, was die Klassifikation erschwert.
+Man kann bereits in diesem Auszug erkennen das die Bilder sehr unterschiedlich im Bezug auf Helligkeit, Kontrast und Bildausschnitt aussehen können, was zusätzlich die Klassifikation erschwert.
+\\
+Ein weiterer wichtiger Aspekt ist, dass die Unterschiede zwischen den Klassen oft sehr subtil sind und eine genaue Analyse der Bildmerkmale erfordern, um eine zuverlässige Klassifikation zu gewährleisten.
+\\ Ebenfalls sind die Klassen im Datensatz im Bezug auf Anzahl der Bilder nicht perfekt ausbalanciert, was bei der Modellentwicklung berücksichtigt werden muss.
 \newpage
 
 \section{Datenaufbereitung}
