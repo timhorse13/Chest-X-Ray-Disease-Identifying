@@ -31,7 +31,7 @@
 
 % Kopfzeile
 \fancyhead[L]{\includegraphics[width=2.5cm]{logo.png}}    % Logo links
-\fancyhead[C]{14.10.2025}                               % Datum in der Mitte
+\fancyhead[C]{15.10.2025}                               % Datum in der Mitte
 \fancyhead[R]{Felix Zauner, Timofey Luzin}                             % Platzhalter für Namen
 
 % Fußzeile
@@ -362,8 +362,8 @@ Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu ver
 \newpage
 
 \section{Evaluation des Modells}
-<<<<<<< HEAD
 Die Evaluation der Modelle erfolgte anhand verschiedener Metriken, darunter Genauigkeit, Präzision, Recall und F1-Score. \\
+Außerdem wurden für die beiden MLP Classifier ROC Curves erstellt, um die Leistung der Modelle visuell darzustellen.
 Hier sind die Ergebnisse der Evaluierung für die verschiedenen Modelle mit verschiedenen Metriken dargestellt:
 \begin{itemize}
     \item \textbf{MLP Classifier} mit \texttt{hidden\_layer\_sizes=(128,128,64), max\_iter=300}  \\
@@ -375,43 +375,8 @@ Hier sind die Ergebnisse der Evaluierung für die verschiedenen Modelle mit vers
 366 & 3 & 695
 \end{bmatrix}
 \]
-=======
-Die Evaluation der Modelle erfolgte anhand verschiedener Metriken, darunter Genauigkeit, Präzision, Recall und F1-Score. Zusätzlich wurden Konfusionsmatrizen erstellt, um die Leistung der Modelle visuell darzustellen.
-\begin{lstlisting}[language=Python, caption=Evaluationscode MLP Classifier]
-# Vorhersagen auf dem Testset machen
-y_pred = mlp.predict(X_test_scaled)
 
-# Ergebnisse auswerten
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred))
-\end{lstlisting}
-\begin{center}
-\[
-\text{Konfusionsmatrix MLP Classifier:}\quad
-\begin{bmatrix}
-680 & 139 & 106 \\
-66 & 507 & 7 \\
-366 & 3 & 695 \\
-\end{bmatrix}
-\]
-\end{center}
 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-& Precision & Recall & F1-score & Support \\
-\hline
-Normal & 0.61 & 0.74 & 0.67 & 925 \\
-Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
-Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
-\hline
-Accuracy & & & 0.72 & 2569 \\
-Macro avg & 0.75 & 0.75 & 0.74 & 2569 \\
-Weighted avg & 0.75 & 0.72 & 0.72 & 2569 \\
-\hline
-\end{tabular}
->>>>>>> d9bcfe7885d83a28dde71d27cb3cc69c1320799a
 
 Classification Report:
 
@@ -426,7 +391,7 @@ Classification Report:
         Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
         Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
         \hline
-        \textbf{Accuracy} & \multicolumn{3}{c|}{0.73} & 2569 \\
+        \textbf{Accuracy} &&&0.73 & 2569 \\
         \textbf{Macro Avg} & 0.75 & 0.75 & 0.75 & 2569 \\
         \textbf{Weighted Avg} & 0.75 & 0.73 & 0.73 & 2569 \\
         \hline
@@ -471,9 +436,9 @@ Classification Report:
 \\Confusion Matrix:
     \[
 \begin{bmatrix}
-692 & 120 & 113 \\
-140 & 428 & 12 \\
-384 & 6 & 674
+582 & 164 & 179 \\
+109 & 466 & 5 \\
+405 & 1 & 658
 \end{bmatrix}
 \]
 
@@ -486,32 +451,124 @@ Classification Report:
         \hline
         \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
         \hline
-        Normal & 0.61 & 0.74 & 0.67 & 925 \\
-        Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
-        Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
+        Normal & 0.53 & 0.63 & 0.58 & 925 \\
+        Pneumonia & 0.74 & 0.80 & 0.77 & 580 \\
+        Tuberculosis & 0.78 & 0.62 & 0.69 & 1064 \\
         \hline
-        \textbf{Accuracy} & \multicolumn{3}{c|}{0.73} & 2569 \\
-        \textbf{Macro Avg} & 0.75 & 0.75 & 0.75 & 2569 \\
-        \textbf{Weighted Avg} & 0.75 & 0.73 & 0.73 & 2569 \\
+        \textbf{Accuracy} & &&0.66 & 2569 \\
+        \textbf{Macro Avg} & 0.68 & 0.68 & 0.68 & 2569 \\
+        \textbf{Weighted Avg} & 0.68 & 0.66 & 0.67 & 2569 \\
         \hline
     \end{tabular}
-    \label{tab:classification_report_mlp2}
+    \label{tab:classification_report_svm1}
+\end{table}
+
+\item \textbf{SVM} mit \texttt{kernel="rbf", C=10} mit Feature Extraction \\
+\\Confusion Matrix:
+    \[
+\begin{bmatrix}
+372 & 164 & 389 \\
+111 & 469 & 0 \\
+404 & 1 & 659
+\end{bmatrix}
+\]
+
+Classification Report:
+
+\begin{table}[H]
+    \centering
+ 
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+        \hline
+        Normal & 0.42 & 0.40 & 0.41 & 925 \\
+        Pneumonia & 0.74 & 0.81 & 0.77 & 580 \\
+        Tuberculosis & 0.63 & 0.62 & 0.62 & 1064 \\
+        \hline
+        \textbf{Accuracy} & & & 0.58 & 2569 \\
+        \textbf{Macro Avg} & 0.60 & 0.61 & 0.60 & 2569 \\
+        \textbf{Weighted Avg} & 0.58 & 0.58 & 0.58 & 2569 \\
+        \hline
+    \end{tabular}
+    \label{tab:classification_report_svm2}
 \end{table}
 
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.2\textwidth]{image.png}
+    \caption{ROC Curves der beiden MLP Classifier}
+    \label{fig:example_image}
+\end{figure}
+Die ROC Curves in Abbildung 1 zeigen die Leistung der beiden MLP Classifier. 
+Eine ROC-Kurve (Receiver Operating Characteristic Curve) ist ein grafisches Werkzeug zur Bewertung der Leistung eines Klassifikationsmodells. Sie stellt die Beziehung zwischen der True Positive Rate (TPR) und der False Positive Rate (FPR) bei verschiedenen Schwellenwerten dar.
+\begin{itemize}
+    \item \textbf{Diagonal:} Eine ROC-Kurve entlang der Diagonalen (45°-Linie) zeigt, dass das Modell keine bessere Leistung als zufälliges Raten erbringt.
+    \item \textbf{Oberhalb der Diagonalen:} Je weiter die Kurve von der Diagonalen entfernt ist, desto besser ist die Trennleistung des Modells.
+    \item \textbf{AUC (Area Under the Curve):} Die Fläche unter der ROC-Kurve quantifiziert die Gesamtleistung des Modells. Ein AUC-Wert von 1 bedeutet perfekte Klassifikation, während ein Wert von 0,5 auf Zufallsraten hinweist.
+    
+\end{itemize}
+
+
 \newpage
 
 \section{Probleme und Herausforderungen im gesamten Projekt}
 \subsection{Technische Herausforderungen}
+Während des Projekts traten im Grunde keine technischen Probleme auf. Die Implementierung und das Training der Modelle verliefen größtenteils reibungslos, dank der Verwendung etablierter Bibliotheken wie Scikit-Learn und OpenCV.\\
+Auch im Bezug auf die Hardware gab es keine nennenswerten Einschränkungen, da die Modelle mit Wartezeiten von bis zu 20 Minuten auf einem handelsüblichen Laptop trainiert werden konnten, was für uns akzeptabel war.\\
 \subsection{Modellierungsprobleme}
 
-\newpage
+Während des Modellierungsprozesses traten mehrere Herausforderungen auf, die die Leistung der Modelle beeinträchtigten:
+
+\begin{itemize}
+    \item \textbf{Overfitting:} 
+    Insbesondere bei den MLP-Modellen wurde festgestellt, dass sie auf den Trainingsdaten sehr gut abschnitten, jedoch auf den Testdaten eine deutlich schlechtere Leistung zeigten. Dies deutet auf Overfitting hin. 
+
+    \item \textbf{Unbalancierte Daten:}
+    Der Datensatz war nicht perfekt ausbalanciert, da die Anzahl der Bilder in den Klassen "Normal", "Pneumonia" und "Tuberculosis" unterschiedlich war. 
+    \begin{itemize}
+        \item Verwendung des Parameters \texttt{class\_weight="balanced"} in den SVM-Modellen, um die Klassenungleichheit auszugleichen.
+        
+        \item Evaluation der Modelle mit Metriken wie F1-Score, die für unbalancierte Daten besser geeignet sind.
+    \end{itemize}
+
+    \item \textbf{Feature Extraction:}
+    Der Versuch, HOG-Features für die SVM-Modelle zu extrahieren, führte nicht zu einer signifikanten Leistungsverbesserung sondern zu einer Verschlechterung. Möglicherweise waren die extrahierten Features nicht repräsentativ für die Klassifikationsaufgabe. Was im Bezug auf die Diagnosemerkmale und der Arbeitsweise von SVMs durchaus Sinn ergibt.
+\end{itemize}
+Trotz dieser Maßnahmen blieb die Leistung der Modelle begrenzt. Dies deutet darauf hin, dass ein Wechsel zu einem CNN-Modell, das speziell für Bilddaten entwickelt wurde, eine vielversprechende nächste Iteration des Projekts darstellen könnte.
+
 
 \section{Schlussfolgerung und Reflexion}
+Trotz der Implementierung verschiedener Modelle, darunter MLP Classifier und SVM, konnten die gewünschten Leistungsziele nicht erreicht werden. \\
+Die Herausforderungen, die während des Projekts auftraten sindkomplexe Bildmerkmale zu erfassen, deuten darauf hin, dass eine andere Modellarchitektur erforderlich ist. \\
+Zukünftige Arbeiten sollten sich auf die Implementierung von Convolutional Neural Networks (CNNs) konzentrieren, die speziell für die Verarbeitung von Bilddaten entwickelt wurden und in der Regel bessere Ergebnisse bei der Bildklassifikation erzielen. \\
+\\
+Trotzalledem konnte aus den Evaluationsergebnissen wertvolle Erkenntnisse gewonnen werden.
+So zeigte sich beispielsweise, dass die MLP Classifier im Vergleich zu dem Feature Extraction SVM-Modell wesentlich weniger oft Tuberkoluse als Normal klassifizierten, im Bezug auf die Arbeitsweise von SVMs mit Feature Extraction und der Diagnosemerkmale von Röntgenbildern die sich wie folgt darstellen: 
+\begin{itemize}
+    \item Tuberkulose kann durch charakteristische Muster wie Kavernen und Konsolidierungen (löchrige Optik) im Lungengewebe erkannt werden.
+    \item Pneumonie kann durch flächige Verschattungen und Infiltrate in den Lungenfeldern identifiziert werden.
+\end{itemize}
+kann so die Erkenntnis gewonnen werden, dass sich SMVs eher an markanten Strukturen orientieren. \\ 
+Dadurch wurde wurden die für die Tuberkulose nötigen feinen Unterschiede in den Röntgenbildern nicht erfasst und die Modelle konnten die Klassen nicht ausreichend unterscheiden. \\\\
+In der ROC Curve der beiden MLP Classifier ist zu erkennen, dass beide Modelle sehr ähnliche Leistungen erbringen, obwohl das zweite Modell mit nur einer versteckten Schicht und weniger Neuronen deutlich einfacher aufgebaut ist. \\
+Dies deutet darauf hin, dass eine weitere Erhöhung der Modellkomplexität nicht zwangsläufig zu einer besseren Leistung führt. \\
+Auch kann man erkennen, dass die Fläche unter der Kurve (AUC) welche die Trennschärfe zwischen fälschlicherweise richtig zugeordneten und richtig richtig zugeordneten Klassen quantifiziert bei Pneumonie am höchsten ist, was auf eine bessere Klassifikationsleistung für diese Klasse hinweist. \\\\
+Insgesamt bietet dieses Projekt jedoch wertvolle Einblicke in die Herausforderungen der Bildklassifikation im medizinischen Bereich und zeigt deutlich die Gründe für die Wahl von CNNs für den Einsatz in echten Anwendungen auf.
+
 
 \newpage
 
 \section{Quellen und Literaturverzeichnis}
+\begin{itemize}
+    \item Scikit-Learn Dokumentation: \url{https://scikit-learn.org/stable/index.html}
+    
+    \item Kaggle Datensatz: \url{https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset}
+    \item Artikel zu MLP Classifier: \url{https://en.wikipedia.org/wiki/Multilayer_perceptron}
+    \item Artikel zu SVM: \url{https://en.wikipedia.org/wiki/Support_vector_machine}
+\end{itemize}
 
 \newpage
 
