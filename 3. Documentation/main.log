@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  14 DEC 2025 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  14 DEC 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -723,81 +723,82 @@ File: logo.png Graphic file (type png)
 Package pdftex.def Info: logo.png  used on input line 132.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [2]
-Overfull \hbox (23.16101pt too wide) in paragraph at lines 135--138
-\OT1/cmr/m/n/12 Der ver-wen-de-te Da-ten-satz stammt von Kag-gle und enth[]alt Thorax-R[]ontgenbilder,
+Overfull \hbox (21.17912pt too wide) in paragraph at lines 135--142
+\OT1/cmr/m/n/12 Die Bil-der lie-gen im JPEG-Format vor und ha-ben kei-ne stan-dar-ti-sier-te Aufl[]osung. 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
-
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 166.
+LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 177.
 (C:\Users\timlu\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\ot1zi4.fd
 File: ot1zi4.fd 2018/01/14 OT1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 166.
+(Font)              scaled to size 12.0pt on input line 177.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 173.
+Package pdftex.def Info: logo.png  used on input line 181.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[3{C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+[3]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 182.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[4{C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
 
  []
 
 (C:\Users\timlu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 179.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 188.
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 179.
+(Font)              scaled to size 10.0pt on input line 188.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 195.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[4]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 205.
+Package pdftex.def Info: logo.png  used on input line 204.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [5]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 209.
+Package pdftex.def Info: logo.png  used on input line 214.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [6]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 215.
+Package pdftex.def Info: logo.png  used on input line 218.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [7]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 219.
+Package pdftex.def Info: logo.png  used on input line 224.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [8]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 223.
+Package pdftex.def Info: logo.png  used on input line 228.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [9]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 227.
+Package pdftex.def Info: logo.png  used on input line 232.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[10] (main.aux)
+[10]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 236.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[11] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -806,17 +807,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 52E1D2675A586A9360464BC0E379C074;2478.
  ) 
 Here is how much of TeX's memory you used:
- 52091 strings out of 468081
- 1332122 string characters out of 5425788
- 2322973 words of memory out of 5000000
- 80130 multiletter control sequences out of 15000+600000
- 633663 words of font info for 61 fonts, out of 8000000 for 9000
+ 52097 strings out of 468081
+ 1332223 string characters out of 5425788
+ 2322779 words of memory out of 5000000
+ 80134 multiletter control sequences out of 15000+600000
+ 634000 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,799b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on main.pdf (11 pages, 124304 bytes).
+ <C:\Users\timlu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+Output written on main.pdf (12 pages, 126667 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
