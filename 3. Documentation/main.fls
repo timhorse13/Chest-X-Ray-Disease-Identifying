@@ -471,10 +471,6 @@ INPUT ./logo.png
 INPUT ./logo.png
 INPUT ./logo.png
 INPUT ./logo.png
-INPUT ./logo.png
-INPUT ./logo.png
-INPUT ./logo.png
-INPUT ./logo.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
