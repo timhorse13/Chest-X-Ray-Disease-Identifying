@@ -12,7 +12,9 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{filecontents}
-
+\usepackage{hyperref}
+\usepackage{dirtree}
+\usepackage{inconsolata}
 
 
 
@@ -37,7 +39,44 @@
 \fancyfoot[C]{Labor}                                   % Mitte Labor
 \fancyfoot[R]{Seite \thepage}                          % Seitenzahl rechts
 
+% Define custom colors
+\definecolor{vscodeblue}{RGB}{86, 156, 214}          % VSCode blue for keywords
+\definecolor{vscodepurple}{RGB}{197, 134, 192}       % VSCode purple for strings
+\definecolor{vscodegreen}{RGB}{78, 201, 176}         % VSCode green for comments
+\definecolor{vscodeorange}{RGB}{220, 165, 95}        % VSCode orange for numbers
+\definecolor{vscodegray}{RGB}{155, 155, 155}         % VSCode gray for line numbers
+
 \begin{document}
+
+\lstset{
+    % Font settings (Inconsolata is very similar to VSCode's default)
+    basicstyle=\ttfamily\footnotesize,
+    % Colors and background
+    backgroundcolor=\color{white},
+    rulecolor=\color{gray!50},
+    % Line numbers
+    numbers=left,
+    numberstyle=\tiny\color{vscodegray},
+    numbersep=8pt,
+    % Frame
+    frame=single,
+    framerule=0.5pt,
+    framesep=5pt,
+    % Syntax highlighting colors
+    commentstyle=\color{vscodegreen},
+    keywordstyle=\color{vscodeblue},
+    stringstyle=\color{vscodepurple},
+    % Layout
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b,
+    xleftmargin=10pt,
+    xrightmargin=5pt
+}
 
 % Titelseite
 \begin{titlepage}
@@ -93,15 +132,72 @@ Abschließend werden die Herausforderungen und Probleme, die während des Projek
 \newpage
 
 \section{Datensatzbeschreibung}
+Der verwendete Datensatz stammt von Kaggle und enthält Thorax-Röntgenbilder, die in drei Kategorien unterteilt sind: gesund, Pneumonie und Tuberkulose.
+Die Bilder sind in verschiedenen Auflösungen und Formaten vorhanden, was eine einheitliche Datenaufbereitung erforderlich macht. \\ \\
+Hier ist eine kurze Übersicht über die Struktur des Datensatzes:
+
+\begin{figure}[H]
+    \dirtree{%
+    .1 chest-xray-dataset.
+    .2 versions.
+    .3 1.
+    .4 test.
+    .5 normal.
+    .6 [925 images].
+    .5 pneumonia.
+    .6 [580 images].
+    .5 tuberculosis.
+    .6 [1064 images].
+    .4 train.
+    .5 normal.
+    .6 [7263 images].
+    .5 pneumonia.
+    .6 [4674 images].
+    .5 tuberculosis.
+    .6 [8513 images].
+    .4 val.
+    .5 normal.
+    .6 [900 images].
+    .5 pneumonia.
+    .6 [570 images].
+    .5 tuberculosis.
+    .6 [1064 images].
+    .4 data.yaml.
+    }
+    \caption{Struktur des Datensatzes}
+    \label{fig:datensatzstruktur}
+\end{figure}
+
+
 
 \newpage
 
 \section{Datenaufbereitung}
+Aufgrund der unterschiedlichen Auflösungen der Bilder im Datensatz war eine sorgfältige Datenaufbereitung erforderlich, um eine konsistente Eingabe für das Modell zu gewährleisten. \\
+Die Bilder wurden sowohl auf eine einheitliche Größe von 128x128 Pixel skaliert, als auch in schwarz-weiß umgewandelt, um die Verarbeitung zu erleichtern und die Leistung des Modells zu optimieren. \\
+
+\begin{lstlisting}[language=Python, caption=Datenaufbereitungscode]
+import cv2
+# Transform and load images
+def load_images(folder, label, img_size=(128, 128)):
+    X, y = [], []
+
+    for file in os.listdir(folder):
+        path = os.path.join(folder, file)
+        img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+        img = cv2.resize(img, img_size)
+        X.append(img)
+        y.append(label)
+
+    return X, y
+\end{lstlisting}
 
 \newpage
 
 \section{Modellauswahl und -training}
 \subsection{Modellauswahl}
+Es wurden alle möglichen Modelle ausprobiert
+
 \subsection{Modelltraining}
 \subsection{Code-Dokumentation}
 \subsection{Probleme und Herausforderungen}
