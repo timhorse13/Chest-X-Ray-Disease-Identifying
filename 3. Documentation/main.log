@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  14 DEC 2025 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  14 DEC 2025 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,7 +690,7 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 <logo.png, id=66, 935.495pt x 538.01pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 86.
+Package pdftex.def Info: logo.png  used on input line 90.
 (pdftex.def)             Requested size: 195.0pt x 112.13986pt.
 
 
@@ -704,15 +704,15 @@ Package pdftex.def Info: logo.png  used on input line 86.
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 119.
+Package pdftex.def Info: logo.png  used on input line 123.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.119 \newpage
+l.123 \newpage
                [1]
-Overfull \hbox (13.24437pt too wide) in paragraph at lines 121--130
+Overfull \hbox (13.24437pt too wide) in paragraph at lines 125--134
 \OT1/cmr/m/n/12 Pro-jekts auf-ge-tre-ten sind, so-wie ei-ne Re-fle-xi-on []uber die Er-geb-nis-se und m[]ogliche
  []
 
@@ -720,85 +720,130 @@ Overfull \hbox (13.24437pt too wide) in paragraph at lines 121--130
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 132.
+Package pdftex.def Info: logo.png  used on input line 136.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [2]
-Overfull \hbox (21.17912pt too wide) in paragraph at lines 135--142
-\OT1/cmr/m/n/12 Die Bil-der lie-gen im JPEG-Format vor und ha-ben kei-ne stan-dar-ti-sier-te Aufl[]osung. 
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 177.
-(C:\Users\timlu\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\ot1zi4.fd
+LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 173.
+ (C:\Users\timlu\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\ot1zi4.fd
 File: ot1zi4.fd 2018/01/14 OT1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 177.
+(Font)              scaled to size 12.0pt on input line 173.
+
+Overfull \hbox (21.17912pt too wide) in paragraph at lines 139--176
+\OT1/cmr/m/n/12 Die Bil-der lie-gen im JPEG-Format vor und ha-ben kei-ne stan-dar-ti-sier-te Aufl[]osung. 
+ []
+
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 181.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[3]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 182.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[4{C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
+[3{C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 (C:\Users\timlu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 188.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 187.
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 188.
+(Font)              scaled to size 10.0pt on input line 187.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 204.
+Package pdftex.def Info: logo.png  used on input line 203.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[4]
+Overfull \hbox (0.74872pt too wide) in paragraph at lines 210--211
+\OT1/cmr/m/n/12 an-ge-pass-te Trai-ningspa-ra-me-ter wird ei-ne sta-bi-le-re und leis-tungsf[]ahigere
+ []
+
+
+Overfull \hbox (2.02367pt too wide) in paragraph at lines 212--213
+\OT1/cmr/m/n/12 Der Co-de ex-tra-hiert HOG-Features aus den Bil-dern, um re-le-van-te Merk-
+ []
+
+
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 216.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [5]
+Overfull \hbox (0.74872pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/12 an-ge-pass-te Trai-ningspa-ra-me-ter wird ei-ne sta-bi-le-re und leis-tungsf[]ahigere
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 214.
+Package pdftex.def Info: logo.png  used on input line 252.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [6]
+Overfull \hbox (2.02367pt too wide) in paragraph at lines 266--267
+\OT1/cmr/m/n/12 Der Co-de ex-tra-hiert HOG-Features aus den Bil-dern, um re-le-van-te Merk-
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 218.
+Package pdftex.def Info: logo.png  used on input line 286.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [7]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 224.
+Package pdftex.def Info: logo.png  used on input line 334.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [8]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 228.
+Package pdftex.def Info: logo.png  used on input line 348.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [9]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 232.
+Package pdftex.def Info: logo.png  used on input line 352.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [10]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 236.
+Package pdftex.def Info: logo.png  used on input line 356.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[11] (main.aux)
+[11]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 362.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[12]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 366.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[13]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 370.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[14]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 374.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[15] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -807,17 +852,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 52E1D2675A586A9360464BC0E379C074;2478.
  ) 
 Here is how much of TeX's memory you used:
- 52097 strings out of 468081
- 1332223 string characters out of 5425788
- 2322779 words of memory out of 5000000
- 80134 multiletter control sequences out of 15000+600000
- 634000 words of font info for 62 fonts, out of 8000000 for 9000
+ 52275 strings out of 468081
+ 1334572 string characters out of 5425788
+ 2383137 words of memory out of 5000000
+ 80208 multiletter control sequences out of 15000+600000
+ 634347 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,15n,107p,799b,1373s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\timlu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on main.pdf (12 pages, 126667 bytes).
+ 102i,16n,107p,799b,2116s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\timlu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/timlu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (16 pages, 171537 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -32,11 +32,11 @@
 % Kopfzeile
 \fancyhead[L]{\includegraphics[width=2.5cm]{logo.png}}    % Logo links
 \fancyhead[C]{14.10.2025}                               % Datum in der Mitte
-\fancyhead[R]{Felix Zauner}                             % Platzhalter für Namen
+\fancyhead[R]{Felix Zauner, Timofey Luzin}                             % Platzhalter für Namen
 
 % Fußzeile
 \fancyfoot[L]{5AHETS}                                  % Klasse links
-\fancyfoot[C]{Labor}                                   % Mitte Labor
+\fancyfoot[C]{ARX}                                   % Mitte Labor
 \fancyfoot[R]{Seite \thepage}                          % Seitenzahl rechts
 
 % Define custom colors
@@ -73,9 +73,13 @@
     showtabs=false,
     breaklines=true,
     breakatwhitespace=true,
+    breakautoindent=true,
     captionpos=b,
-    xleftmargin=10pt,
-    xrightmargin=5pt
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    framexleftmargin=0pt,  % Remove frame left margin
+    framexrightmargin=0pt, % Remove frame right margin
+    linewidth=\textwidth  % Use full text width
 }
 
 % Titelseite
@@ -134,50 +138,45 @@ Abschließend werden die Herausforderungen und Probleme, die während des Projek
 \section{Datensatzbeschreibung}
 Der Datensatz stammt beinhaltet insgesamt 25.600 Thorax-Röntgenbilder, die in drei Klassen unterteilt sind: Gesunde Patienten, Patienten mit Pneumonie und Patienten mit Tuberkulose.
 Die Bilder sind schon in Trainings-, Validierungs- und Testsets aufgeteilt.
-In unserer Anwendung verwenden wir ausschließlich das Trainingsset und das Testset.
+In unserer Anwendung verwenden wir \textit{ausschließlich} das \textit{Trainingsset} und das \textit{Testset}.
 \\
 Die Bilder liegen im JPEG-Format vor und haben keine standartisierte Auflösung.
 \\
-Die Verteilung der Klassen im Datensatz ist wie folgt:
-\begin{itemize}
-    \item Gesunde Patienten: ca. 7.000 Bilder
-    \item Patienten mit Pneumonie: ca. 5.000 Bilder
-    \item Patienten mit Tuberkulose: ca. 9.500 Bilder
-\end{itemize}
-Das Datenset wurde von Kaggle bereitgestellt und ist öffentlich zugänglich unter folgendem Link: \\
-https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset
-
+Hier ist eine Übersicht über die Struktur des Datensatzes dargestellt:
 \begin{figure}[H]
     \dirtree{%
     .1 chest-xray-dataset.
     .2 versions.
     .3 1.
-    .4 test.
-    .5 normal.
-    .6 [925 images].
-    .5 pneumonia.
-    .6 [580 images].
-    .5 tuberculosis.
-    .6 [1064 images].
-    .4 train.
-    .5 normal.
-    .6 [7263 images].
-    .5 pneumonia.
-    .6 [4674 images].
-    .5 tuberculosis.
-    .6 [8513 images].
+    .4 \textcolor{green!60!black}{test}.
+    .5 \textcolor{green!60!black}{normal}.
+    .6 [925 Abbildungen].
+    .5 \textcolor{green!60!black}{pneumonia}.
+    .6 [580 Abbildungen].
+    .5 \textcolor{green!60!black}{tuberculosis}.
+    .6 [1064 Abbildungen].
+    .4 \textcolor{green!60!black}{train}.
+    .5 \textcolor{green!60!black}{normal}.
+    .6 [7263 Abbildungen].
+    .5 \textcolor{green!60!black}{pneumonia}.
+    .6 [4674 Abbildungen].
+    .5 \textcolor{green!60!black}{tuberculosis}.
+    .6 [8513 Abbildungen].
     .4 val.
     .5 normal.
-    .6 [900 images].
+    .6 [900 Abbildungen].
     .5 pneumonia.
-    .6 [570 images].
+    .6 [570 Abbildungen].
     .5 tuberculosis.
-    .6 [1064 images].
+    .6 [1064 Abbildungen].
     .4 data.yaml.
     }
     \caption{Struktur des Datensatzes}
     \label{fig:datensatzstruktur}
 \end{figure}
+
+Das Datenset wurde von Kaggle bereitgestellt und ist öffentlich zugänglich unter folgendem Link: \\
+https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset
 
 \newpage
 
@@ -205,12 +204,151 @@ def load_images(folder, label, img_size=(128, 128)):
 
 \section{Modellauswahl und -training}
 \subsection{Modellauswahl}
-Es wurden alle möglichen Modelle ausprobiert
+Es wurden mehrere Modelle ausprobiert, darunter:
+\begin{itemize}
+    \item MLP Classifier: \\ Einfach zu implementieren und schnell zu trainieren, geeignet für erste Tests.
+    \item MLP Classifier mit mehr Schichten: \\ Der Code definiert und trainiert einen optimierten MLP-Klassifikator mit zwei versteckten Schichten und erhöhter Modellkapazität. Durch angepasste Trainingsparameter wird eine stabilere und leistungsfähigere Klassifikation auf den skalierten Trainingsdaten erreicht.
+    \item SVC ohne Feature Extraction \\ Der Code initialisiert einen Support Vector Classifier mit RBF-Kernel und balancierten Klassengewichten. Das Modell wird anschließend mit den skalierten Trainingsdaten trainiert, um eine nichtlineare Klassifikationsgrenze zu erlernen.
+    \item SVC mit PCA Feature Extraction: \\ Der Code extrahiert HOG-Features aus den Bildern, um relevante Merkmale für die Klassifikation zu gewinnen. Diese Features werden anschließend für das Training eines Support Vector Classifiers verwendet, um die Leistung des Modells zu verbessern.
+\end{itemize}
 
+
+\newpage
 \subsection{Modelltraining}
-\subsection{Code-Dokumentation}
-\subsection{Probleme und Herausforderungen}
+Das Training der Modelle erfolgte mit dem vorbereiteten Datensatz. Verschiedene Hyperparameter wurden getestet, um die Leistung zu optimieren.
+\begin{itemize}
+    \item MLP Classifier: \\ Der Code initialisiert und trainiert einen mehrschichtigen Perzeptron-Klassifikator (MLP) mit einem versteckten Layer. Dazu werden die Bilddaten zunächst abgeflacht, standardisiert und anschließend zum Trainieren des Modells verwendet.
 
+    \begin{lstlisting}[language=Python, caption=MLP Classifier]
+# Train MLP Classifier
+mlp = MLPClassifier(hidden_layer_sizes=(50,), max_iter=50, alpha=1e-4, solver='adam', verbose=True, random_state=912)
+
+# Flatten images to (n_samples, n_features) because MLPClassifier expects 2D input
+X_train_flat = X_train.reshape(X_train.shape[0], -1)
+X_test_flat = X_test.reshape(X_test.shape[0], -1)
+
+# Scale features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train_flat)
+X_test_scaled = scaler.transform(X_test_flat)
+
+# Fit model
+mlp.fit(X_train_scaled, y_train)
+
+    \end{lstlisting}
+    
+    \vfill
+    \item MLP Classifier mit mehr Schichten: \\ Der Code definiert und trainiert einen optimierten MLP-Klassifikator mit zwei versteckten Schichten und erhöhter Modellkapazität. Durch angepasste Trainingsparameter wird eine stabilere und leistungsfähigere Klassifikation auf den skalierten Trainingsdaten erreicht.
+    
+    \begin{lstlisting}[language=Python, caption=MLP Classifier mit mehr Schichten]
+# Optimized MLP with early stopping, higher max_iter and tuned learning rate/batch size
+mlp2 = MLPClassifier(hidden_layer_sizes=(100,100), max_iter=100, alpha=1e-4, solver='adam', verbose=True, random_state=912)
+
+# Fit model
+mlp2.fit(X_train_scaled, y_train)
+    \end{lstlisting}
+
+    \item SVC ohne Feature Extraction \\ Der Code initialisiert einen Support Vector Classifier mit RBF-Kernel und balancierten Klassengewichten. Das Modell wird anschließend mit den skalierten Trainingsdaten trainiert, um eine nichtlineare Klassifikationsgrenze zu erlernen.
+    
+    \begin{lstlisting}[language=Python, caption=SVC ohne Feature Extraction]
+from sklearn.svm import SVC
+
+svc = SVC(
+    kernel="rbf",
+    C=10,
+    gamma="scale",
+    class_weight="balanced"
+)
+
+svc.fit(X_train_scaled, y_train)
+    \end{lstlisting}
+    
+    \item SVC mit PCA Feature Extraction: \\ Der Code extrahiert HOG-Features aus den Bildern, um relevante Merkmale für die Klassifikation zu gewinnen. Diese Features werden anschließend für das Training eines Support Vector Classifiers verwendet, um die Leistung des Modells zu verbessern.
+    
+    \begin{lstlisting}[language=Python, caption=SVC mit PCA Feature Extraction]
+from skimage.feature import hog
+
+def extract_hog(images):
+    features = []
+    for img in images:
+        hog_feat = hog(
+            img,
+            orientations=9,
+            pixels_per_cell=(8, 8),
+            cells_per_block=(2, 2),
+            block_norm='L2-Hys'
+        )
+        features.append(hog_feat)
+    return np.array(features)
+    \end{lstlisting}
+\end{itemize}
+
+\newpage
+\subsection{Code-Dokumentation}
+Hier sind die während der Vorvearbeitung und dem Training verwendeten Code-Snippets dokumentiert:
+\begin{lstlisting}[language=Python, caption=Hauptlibraries]
+# Libraries importieren
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_openml
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import classification_report,
+                            confusion_matrix
+from sklearn.preprocessing import StandardScaler
+import kagglehub
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=Herunterladen des Datensatzes und Pfadzuweisung]
+# Download latest version of dataset from Kaggle
+path = kagglehub.dataset_download("muhammadrehan00
+                            /chest-xray-dataset")
+
+print("Path to dataset files:", path)
+
+# Print the paths to the train and test directories
+train_dir = os.path.join(path, "chest_xray", "train")
+test_dir = os.path.join(path, "chest_xray", "test")
+print("Train directory:", train_dir)
+print("Test directory:", test_dir)
+\end{lstlisting}
+\vfill
+
+\begin{lstlisting}[language=Python, caption=Einteilung der Bilder in Arrays und Labels zur weiteren Verarbeitung durch das entwickelte Modell]
+# Prepare training data
+X_train, y_train = [], []
+
+# Train
+normal_X, normal_y = load_images(os.path.join(path, "train/NORMAL"), "Normal")
+pneu_X, pneu_y     = load_images(os.path.join(path, "train/PNEUMONIA"), "Pneumonia")
+tub_X, tub_y       = load_images(os.path.join(path, "train/TUBERCULOSIS"), "Tuberculosis")
+
+X_train.extend(normal_X + pneu_X + tub_X)
+y_train.extend(normal_y + pneu_y + tub_y)
+
+X_train = np.array(X_train)
+y_train = np.array(y_train)
+
+# Prepare testing data
+X_test, y_test = [], []
+
+# Test
+normal_X, normal_y = load_images(os.path.join(path, "test/NORMAL"), "Normal")
+pneu_X, pneu_y     = load_images(os.path.join(path, "test/PNEUMONIA"), "Pneumonia")
+tub_X, tub_y       = load_images(os.path.join(path, "test/TUBERCULOSIS"), "Tuberculosis")
+
+X_test.extend(normal_X + pneu_X + tub_X)
+y_test.extend(normal_y + pneu_y + tub_y)
+
+X_test = np.array(X_test)
+y_test = np.array(y_test)
+\end{lstlisting}
+
+\newpage
+\subsection{Probleme und Herausforderungen}
+Die Ergebnisse waren in unserem Fall unzureichend, mit einer Genauigkeit von nur etwa 0,7. Dies könnte auf verschiedene Faktoren zurückzuführen sein, darunter die Komplexität der Bilder, die begrenzte Größe des Datensatzes oder die Wahl der Modelle und Hyperparameter. \\
+Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu verwenden, da diese Modelle speziell für die Verarbeitung von Bilddaten entwickelt wurden und in der Regel bessere Ergebnisse bei der Bildklassifikation erzielen.
 \newpage
 
 \section{Evaluation des Modells}
