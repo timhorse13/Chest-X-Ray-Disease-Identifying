@@ -391,11 +391,20 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/inconsolata/ot1-zi4r-0.tfm
+INPUT ./image copy.png
+INPUT ./image copy.png
+INPUT ./image copy.png
+INPUT ./image copy.png
+INPUT ./image copy.png
 INPUT ./logo.png
 INPUT ./logo.png
 INPUT ./logo.png
 INPUT ./logo.png
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc
+INPUT ./logo.png
+INPUT ./logo.png
+INPUT ./logo.png
+INPUT ./logo.png
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstlang1.sty

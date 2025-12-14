@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1765743284.93611 "/Users/felixzauner/Documents/Privat/Github/Chest-X-Ray-Disease-Identifying/3. Documentation/main.tex" "main.pdf" "main" 1765743285.75236 0
-  "/Users/felixzauner/Documents/Privat/Github/Chest-X-Ray-Disease-Identifying/3. Documentation/main.tex" 1765743284.76545 25027 6d4894b3f109b6021edf942ffa2c9038 ""
+["pdflatex"] 1765744749.74736 "/Users/felixzauner/Documents/Privat/Github/Chest-X-Ray-Disease-Identifying/3. Documentation/main.tex" "main.pdf" "main" 1765744750.64884 0
+  "/Users/felixzauner/Documents/Privat/Github/Chest-X-Ray-Disease-Identifying/3. Documentation/main.tex" 1765744749.56697 25473 50d9c42b6d107399f4a78ef6a6ecd69a ""
   "/Users/felixzauner/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1759222120.92233 14040 be47c81e70740004cf1cb1c6963810d1 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -231,12 +231,13 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1765737643 92866 a9e688e130ad098e430a86b41a464833 ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1742978220 2663826 af5a24dc47d17293ca95ca9a8aa57ffb ""
   "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
+  "image copy.png" 1765744230.89009 454451 f132d4b705f975b86310c5f1d9670bb4 ""
   "image.png" 1765741254.50163 157856 e234dfbac1d0983110a5d580cead2325 ""
   "logo.png" 1765737221.65809 21917 abd02e4de52c1dbd1ff3c9b0098ac804 ""
-  "main.aux" 1765743285.70204 4090 f217a161fa3425d0832370ae723089ef "pdflatex"
-  "main.out" 1765743285.70263 2478 52e1d2675a586a9360464bc0e379c074 "pdflatex"
-  "main.tex" 1765743284.76545 25027 6d4894b3f109b6021edf942ffa2c9038 ""
-  "main.toc" 1765743285.70277 1277 77bcdbd1a1cb0bf91d797da12c725fc4 "pdflatex"
+  "main.aux" 1765744750.59723 4328 082eaed10302d24d18c44ae17cb8f5b5 "pdflatex"
+  "main.out" 1765744750.5979 2478 52e1d2675a586a9360464bc0e379c074 "pdflatex"
+  "main.tex" 1765744749.56697 25473 50d9c42b6d107399f4a78ef6a6ecd69a ""
+  "main.toc" 1765744750.59806 1277 2b89773430078c0ed025dac22b055fbd "pdflatex"
   (generated)
   "main.aux"
   "main.log"
