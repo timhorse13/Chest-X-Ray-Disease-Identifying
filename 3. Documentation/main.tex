@@ -132,9 +132,20 @@ Abschließend werden die Herausforderungen und Probleme, die während des Projek
 \newpage
 
 \section{Datensatzbeschreibung}
-Der verwendete Datensatz stammt von Kaggle und enthält Thorax-Röntgenbilder, die in drei Kategorien unterteilt sind: gesund, Pneumonie und Tuberkulose.
-Die Bilder sind in verschiedenen Auflösungen und Formaten vorhanden, was eine einheitliche Datenaufbereitung erforderlich macht. \\ \\
-Hier ist eine kurze Übersicht über die Struktur des Datensatzes:
+Der Datensatz stammt beinhaltet insgesamt 25.600 Thorax-Röntgenbilder, die in drei Klassen unterteilt sind: Gesunde Patienten, Patienten mit Pneumonie und Patienten mit Tuberkulose.
+Die Bilder sind schon in Trainings-, Validierungs- und Testsets aufgeteilt.
+In unserer Anwendung verwenden wir ausschließlich das Trainingsset und das Testset.
+\\
+Die Bilder liegen im JPEG-Format vor und haben keine standartisierte Auflösung.
+\\
+Die Verteilung der Klassen im Datensatz ist wie folgt:
+\begin{itemize}
+    \item Gesunde Patienten: ca. 7.000 Bilder
+    \item Patienten mit Pneumonie: ca. 5.000 Bilder
+    \item Patienten mit Tuberkulose: ca. 9.500 Bilder
+\end{itemize}
+Das Datenset wurde von Kaggle bereitgestellt und ist öffentlich zugänglich unter folgendem Link: \\
+https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset
 
 \begin{figure}[H]
     \dirtree{%
@@ -167,8 +178,6 @@ Hier ist eine kurze Übersicht über die Struktur des Datensatzes:
     \caption{Struktur des Datensatzes}
     \label{fig:datensatzstruktur}
 \end{figure}
-
-
 
 \newpage
 
