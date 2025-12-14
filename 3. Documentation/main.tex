@@ -183,8 +183,10 @@ https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset
 \section{Datenaufbereitung}
 Aufgrund der unterschiedlichen Auflösungen der Bilder im Datensatz war eine sorgfältige Datenaufbereitung erforderlich, um eine konsistente Eingabe für das Modell zu gewährleisten. \\
 Die Bilder wurden sowohl auf eine einheitliche Größe von 128x128 Pixel skaliert, als auch in schwarz-weiß umgewandelt, um die Verarbeitung zu erleichtern und die Leistung des Modells zu optimieren. \\
+Dies wurde mit der OpenCV-Bibliothek in Python durchgeführt. \\
+Das folgende Code-Snippet zeigt die Implementierung der Bildskalierung und der Umwandlung in Graustufen:\\
 
-\begin{lstlisting}[language=Python, caption=Datenaufbereitungscode]
+\begin{lstlisting}[language=Python, caption=Image Resizing und Grayscale Conversion]
 import cv2
 # Transform and load images
 def load_images(folder, label, img_size=(128, 128)):
@@ -204,13 +206,21 @@ def load_images(folder, label, img_size=(128, 128)):
 
 \section{Modellauswahl und -training}
 \subsection{Modellauswahl}
-Es wurden mehrere Modelle ausprobiert, darunter:
+Zu Beginn des Projektes wurde der bereits im Exposé genannte MLP Classifier implementiert und trainiert. \\ Nach ersten Tests und Evaluierungen wurde jedoch festgestellt, dass die Ergebnisse nicht zufriedenstellend waren. \\
+Daraufhin wurde ein zweiter MLP Classifier mit mehr Schichten und optimierten Hyperparametern ausprobiert, um die Leistung zu verbessern. \\
+Auf der Suche nach weiteren Verbesserungen wurde auch ein SVM (Support Vector Machine) Classifier mit \& ohne Feature Extraction getestet. \\
+
+Die folgenden Modelle wurden evaluiert:
 \begin{itemize}
-    \item MLP Classifier: \\ Einfach zu implementieren und schnell zu trainieren, geeignet für erste Tests.
-    \item MLP Classifier mit mehr Schichten: \\ Der Code definiert und trainiert einen optimierten MLP-Klassifikator mit zwei versteckten Schichten und erhöhter Modellkapazität. Durch angepasste Trainingsparameter wird eine stabilere und leistungsfähigere Klassifikation auf den skalierten Trainingsdaten erreicht.
-    \item SVC ohne Feature Extraction \\ Der Code initialisiert einen Support Vector Classifier mit RBF-Kernel und balancierten Klassengewichten. Das Modell wird anschließend mit den skalierten Trainingsdaten trainiert, um eine nichtlineare Klassifikationsgrenze zu erlernen.
-    \item SVC mit PCA Feature Extraction: \\ Der Code extrahiert HOG-Features aus den Bildern, um relevante Merkmale für die Klassifikation zu gewinnen. Diese Features werden anschließend für das Training eines Support Vector Classifiers verwendet, um die Leistung des Modells zu verbessern.
+    \item \textbf{MLP Classifier:} 
+\\
+Ein mehrschichtiger Perzeptron-Klassifikator (MLP) ist ein Feedforward-Neuronales Netzwerk, das aus mehreren Schichten von Neuronen besteht: einer Eingabeschicht, einer oder mehreren versteckten Schichten und einer Ausgabeschicht. Jede Verbindung zwischen den Neuronen hat ein Gewicht, das während des Trainings angepasst wird. Der MLP verwendet Aktivierungsfunktionen (z.B. ReLU, Sigmoid), um Nichtlinearitäten einzuführen und komplexe Muster in den Daten zu lernen. Das Training erfolgt durch Backpropagation und Optimierungsalgorithmen wie Adam oder SGD, um die Gewichte zu aktualisieren und die Vorhersagegenauigkeit zu maximieren.
+
+   
+    \item \textbf{SVM ohne Feature Extraction} \\ 
+Ein Support Vector Machine (SVM) ist ein klassischer, margin‑basierter Klassifikator. Grob funktioniert er so: die SVM sucht eine (lineare) Trennfläche im Merkmalsraum, die den Abstand (Margin) zwischen den Klassen maximiert; nur die Trainingspunkte, die die Margin am stärksten bestimmen (Support‑Vectors), beeinflussen das Modell. Für nichtlineare Probleme wird der Kernel‑Trick (z.B. RBF, polynomial) genutzt, der implizit in einen höherdimensionalen Raum abbildet, sodass eine lineare Trennung dort möglich wird. Mit dem Regularisierungsparameter C lässt sich die Toleranz gegenüber Fehlklassifikationen (Soft‑Margin) steuern.
 \end{itemize}
+
 
 
 \newpage
@@ -347,12 +357,110 @@ y_test = np.array(y_test)
 
 \newpage
 \subsection{Probleme und Herausforderungen}
-Die Ergebnisse waren in unserem Fall unzureichend, mit einer Genauigkeit von nur etwa 0,7. Dies könnte auf verschiedene Faktoren zurückzuführen sein, darunter die Komplexität der Bilder, die begrenzte Größe des Datensatzes oder die Wahl der Modelle und Hyperparameter. \\
+Die Ergebnisse sowohl bei MLP Classifier als auch bei SVM waren in unserem Fall unzureichend, mit einem F1 Score von nur etwa 0,7. Dies könnte auf verschiedene Faktoren zurückzuführen sein, darunter die Komplexität der Bilder, die begrenzte Größe des Datensatzes oder die Wahl der Modelle und Hyperparameter. \\
 Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu verwenden, da diese Modelle speziell für die Verarbeitung von Bilddaten entwickelt wurden und in der Regel bessere Ergebnisse bei der Bildklassifikation erzielen.
 \newpage
 
 \section{Evaluation des Modells}
+Die Evaluation der Modelle erfolgte anhand verschiedener Metriken, darunter Genauigkeit, Präzision, Recall und F1-Score. \\
+Hier sind die Ergebnisse der Evaluierung für die verschiedenen Modelle mit verschiedenen Metriken dargestellt:
+\begin{itemize}
+    \item \textbf{MLP Classifier} mit \texttt{hidden\_layer\_sizes=(128,128,64), max\_iter=300}  \\
+    \\Confusion Matrix:
+    \[
+\begin{bmatrix}
+680 & 139 & 106 \\
+66 & 507 & 7 \\
+366 & 3 & 695
+\end{bmatrix}
+\]
 
+Classification Report:
+
+\begin{table}[H]
+    \centering
+ 
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+        \hline
+        Normal & 0.61 & 0.74 & 0.67 & 925 \\
+        Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
+        Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
+        \hline
+        \textbf{Accuracy} & \multicolumn{3}{c|}{0.73} & 2569 \\
+        \textbf{Macro Avg} & 0.75 & 0.75 & 0.75 & 2569 \\
+        \textbf{Weighted Avg} & 0.75 & 0.73 & 0.73 & 2569 \\
+        \hline
+    \end{tabular}
+    \label{tab:classification_report_mlp1}
+\end{table}
+
+
+\item \textbf{MLP Classifier} mit \texttt{hidden\_layer\_sizes=(10), max\_iter=50}  \\
+\\Confusion Matrix:
+    \[
+\begin{bmatrix}
+692 & 120 & 113 \\
+140 & 428 & 12 \\
+384 & 6 & 674
+\end{bmatrix}
+\]
+
+Classification Report:
+
+\begin{table}[H]
+    \centering
+ 
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+        \hline
+        Normal & 0.57 & 0.75 & 0.65 & 925 \\
+        Pneumonia & 0.77 & 0.74 & 0.75 & 580 \\
+        Tuberculosis & 0.84 & 0.63 & 0.72 & 1064 \\
+        \hline
+        \textbf{Accuracy} & && 0.70 & 2569 \\
+        \textbf{Macro Avg} & 0.75 & 0.75 & 0.75 & 2569 \\
+        \textbf{Weighted Avg} & 0.75 & 0.73 & 0.73 & 2569 \\
+        \hline
+    \end{tabular}
+    \label{tab:classification_report_mlp2}
+\end{table}
+
+
+\item \textbf{SVM} mit \texttt{kernel="rbf", C=10} ohne     Feature Extraction \\
+\\Confusion Matrix:
+    \[
+\begin{bmatrix}
+692 & 120 & 113 \\
+140 & 428 & 12 \\
+384 & 6 & 674
+\end{bmatrix}
+\]
+
+Classification Report:
+
+\begin{table}[H]
+    \centering
+ 
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+        \hline
+        Normal & 0.61 & 0.74 & 0.67 & 925 \\
+        Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
+        Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
+        \hline
+        \textbf{Accuracy} & \multicolumn{3}{c|}{0.73} & 2569 \\
+        \textbf{Macro Avg} & 0.75 & 0.75 & 0.75 & 2569 \\
+        \textbf{Weighted Avg} & 0.75 & 0.73 & 0.73 & 2569 \\
+        \hline
+    \end{tabular}
+    \label{tab:classification_report_mlp2}
+\end{table}
+
+\end{itemize}
 \newpage
 
 \section{Probleme und Herausforderungen im gesamten Projekt}
