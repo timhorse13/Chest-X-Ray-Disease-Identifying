@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  13 DEC 2025 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  14 DEC 2025 14:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,52 +551,57 @@ File: logo.png Graphic file (type png)
 Package pdftex.def Info: logo.png  used on input line 93.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [2]
+Overfull \hbox (21.17912pt too wide) in paragraph at lines 96--104
+\OT1/cmr/m/n/12 Die Bil-der lie-gen im JPEG-Format vor und ha-ben kei-ne stan-dar-ti-sier-te Aufl[]osung. 
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 97.
+Package pdftex.def Info: logo.png  used on input line 112.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [3]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 101.
+Package pdftex.def Info: logo.png  used on input line 116.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [4]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 109.
+Package pdftex.def Info: logo.png  used on input line 124.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [5]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 113.
+Package pdftex.def Info: logo.png  used on input line 128.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [6]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 119.
+Package pdftex.def Info: logo.png  used on input line 134.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [7]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 123.
+Package pdftex.def Info: logo.png  used on input line 138.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [8]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 127.
+Package pdftex.def Info: logo.png  used on input line 142.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [9]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 131.
+Package pdftex.def Info: logo.png  used on input line 146.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [10] (./main.aux)
  ***********
@@ -605,18 +610,18 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 44045 strings out of 474662
- 1206950 string characters out of 5751109
+ 44050 strings out of 474662
+ 1207044 string characters out of 5751109
  2041049 words of memory out of 5000000
- 66635 multiletter control sequences out of 15000+600000
- 564371 words of font info for 55 fonts, out of 8000000 for 9000
+ 66639 multiletter control sequences out of 15000+600000
+ 564708 words of font info for 56 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  102i,15n,107p,819b,408s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (11 pages, 71405 bytes).
+ </Users/felixzauner/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on main.pdf (11 pages, 73031 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
