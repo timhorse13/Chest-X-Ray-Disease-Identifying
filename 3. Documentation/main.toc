@@ -2,15 +2,14 @@
 \contentsline {section}{\numberline {1}Einleitung}{2}{section.1}%
 \contentsline {section}{\numberline {2}Datensatzbeschreibung}{3}{section.2}%
 \contentsline {section}{\numberline {3}Datenaufbereitung}{5}{section.3}%
-\contentsline {section}{\numberline {4}Modellauswahl und -training}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Modellauswahl}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Modelltraining}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Code-Dokumentation}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Probleme und Herausforderungen}{11}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Evaluation des Modells}{12}{section.5}%
-\contentsline {section}{\numberline {6}Probleme und Herausforderungen im gesamten Projekt}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Technische Herausforderungen}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Modellierungsprobleme}{15}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Schlussfolgerung und Reflexion}{16}{section.7}%
-\contentsline {section}{\numberline {8}Quellen und Literaturverzeichnis}{18}{section.8}%
-\contentsline {section}{\numberline {9}Anhang}{19}{section.9}%
+\contentsline {section}{\numberline {4}Modellauswahl und -training}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modellauswahl}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modelltraining}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Probleme und Herausforderungen}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Evaluation des Modells}{10}{section.5}%
+\contentsline {section}{\numberline {6}Probleme und Herausforderungen im gesamten Projekt}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Technische Herausforderungen}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Modellierungsprobleme}{13}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Schlussfolgerung und Reflexion}{14}{section.7}%
+\contentsline {section}{\numberline {8}Quellen und Literaturverzeichnis}{16}{section.8}%
+\contentsline {section}{\numberline {9}Anhang}{17}{section.9}%

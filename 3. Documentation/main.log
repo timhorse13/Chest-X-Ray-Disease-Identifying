@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  14 DEC 2025 21:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  14 DEC 2025 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,7 +673,7 @@ Package hyperref Info: Link coloring OFF on input line 49.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
-<logo.png, id=67, 935.495pt x 538.01pt>
+<logo.png, id=63, 935.495pt x 538.01pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 90.
@@ -720,7 +720,7 @@ Overfull \hbox (21.17912pt too wide) in paragraph at lines 139--177
 \OT1/cmr/m/n/12 Die Bil-der lie-gen im JPEG-Format vor und ha-ben kei-ne stan-dar-ti-sier-te Aufl[]osung. 
  []
 
-<image copy.png, id=101, 614.295pt x 297.11pt>
+<image copy.png, id=96, 614.295pt x 297.11pt>
 File: image copy.png Graphic file (type png)
 <use image copy.png>
 Package pdftex.def Info: image copy.png  used on input line 185.
@@ -757,15 +757,21 @@ LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 217.
+Package pdftex.def Info: logo.png  used on input line 236.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 221--224
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 260.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
 
-Overfull \hbox (5.98352pt too wide) in paragraph at lines 227--230
+Overfull \hbox (5.98352pt too wide) in paragraph at lines 270--273
 \OT1/cmr/m/n/12 Ein mehr-schich-ti-ger Perzeptron-Klassifikator (MLP) ist ein Feedforward-
  []
 
@@ -773,10 +779,10 @@ Overfull \hbox (5.98352pt too wide) in paragraph at lines 227--230
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 238.
+Package pdftex.def Info: logo.png  used on input line 281.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[6]
-Overfull \hbox (0.74872pt too wide) in paragraph at lines 263--264
+[7]
+Overfull \hbox (0.74872pt too wide) in paragraph at lines 306--307
 \OT1/cmr/m/n/12 an-ge-pass-te Trai-ningspa-ra-me-ter wird ei-ne sta-bi-le-re und leis-tungsf[]ahigere
  []
 
@@ -784,10 +790,10 @@ Overfull \hbox (0.74872pt too wide) in paragraph at lines 263--264
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 274.
+Package pdftex.def Info: logo.png  used on input line 317.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[7]
-Overfull \hbox (2.02367pt too wide) in paragraph at lines 288--289
+[8]
+Overfull \hbox (2.02367pt too wide) in paragraph at lines 331--332
 \OT1/cmr/m/n/12 Der Co-de ex-tra-hiert HOG-Features aus den Bil-dern, um re-le-van-te Merk-
  []
 
@@ -795,43 +801,25 @@ Overfull \hbox (2.02367pt too wide) in paragraph at lines 288--289
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 308.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[8]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 356.
+Package pdftex.def Info: logo.png  used on input line 343.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [9]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 370.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[10]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 374.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[11]
-Overfull \hbox (11.95319pt too wide) in paragraph at lines 381--383
+Overfull \hbox (11.95319pt too wide) in paragraph at lines 350--352
 []\OT1/cmr/bx/n/12 MLP Clas-si-fier \OT1/cmr/m/n/12 mit \OT1/zi4/m/n/12 hidden[]layer[]sizes=(128,128,64), max[]iter=300 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--383
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
@@ -839,20 +827,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--449
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 449.
+Package pdftex.def Info: logo.png  used on input line 418.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 447--449
 
  []
 
-<image.png, id=267, 921.4425pt x 358.33875pt>
+<image.png, id=219, 921.4425pt x 358.33875pt>
 File: image.png Graphic file (type png)
 <use image.png>
-Package pdftex.def Info: image.png  used on input line 513.
+Package pdftex.def Info: image.png  used on input line 482.
 (pdftex.def)             Requested size: 467.99881pt x 181.99579pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 513--514
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 482--483
  [][] 
  []
 
@@ -860,31 +848,31 @@ Overfull \hbox (77.99881pt too wide) in paragraph at lines 513--514
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 517.
+Package pdftex.def Info: logo.png  used on input line 486.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[13]
+[11]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 527.
+Package pdftex.def Info: logo.png  used on input line 496.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[14 <./image.png>]
-Overfull \hbox (8.37366pt too wide) in paragraph at lines 531--533
+[12 <./image.png>]
+Overfull \hbox (8.37366pt too wide) in paragraph at lines 500--502
 \OT1/cmr/m/n/12 Auch im Be-zug auf die Hard-wa-re gab es kei-ne nen-nens-wer-ten Ein-schr[]ankungen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--533
+Underfull \hbox (badness 10000) in paragraph at lines 500--502
 
  []
 
 
-Overfull \hbox (12.6686pt too wide) in paragraph at lines 544--545
+Overfull \hbox (12.6686pt too wide) in paragraph at lines 513--514
 []\OT1/cmr/m/n/12 Verwendung des Pa-ra-me-ters \OT1/zi4/m/n/12 class[]weight="balanced" \OT1/cmr/m/n/12 in den SVM-
  []
 
 
-Overfull \hbox (5.6815pt too wide) in paragraph at lines 549--551
+Overfull \hbox (5.6815pt too wide) in paragraph at lines 518--520
 []\OT1/cmr/bx/n/12 Feature Ex-trac-ti-on: \OT1/cmr/m/n/12 Der Ver-such, HOG-Features f[]ur die SVM-Modelle
  []
 
@@ -892,51 +880,51 @@ Overfull \hbox (5.6815pt too wide) in paragraph at lines 549--551
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 555.
+Package pdftex.def Info: logo.png  used on input line 524.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 525--531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--541
+
+ []
+
+
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 541.
+(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
+[14]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 543.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 556--562
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--572
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--572
-
- []
-
-
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 572.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[16]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 574.
-(pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[17]
-Overfull \hbox (18.33817pt too wide) in paragraph at lines 578--579
+Overfull \hbox (18.33817pt too wide) in paragraph at lines 547--548
 []\OT1/cmr/m/n/12 Scikit-Learn Do-ku-men-ta-ti-on: []$\OT1/zi4/m/n/12 https : / / scikit-[]learn . org / stable / index .
  []
 
 
-Overfull \hbox (22.57901pt too wide) in paragraph at lines 580--581
+Overfull \hbox (22.57901pt too wide) in paragraph at lines 549--550
 []\OT1/cmr/m/n/12 Kaggle Da-ten-satz: []$\OT1/zi4/m/n/12 https : / / www . kaggle . com / datasets / muhammadrehan00 /
  []
 
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 581.
+(Font)              scaled to size 8.0pt on input line 550.
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 6.0pt on input line 581.
+(Font)              scaled to size 6.0pt on input line 550.
 
-Overfull \hbox (17.30705pt too wide) in paragraph at lines 581--582
+Overfull \hbox (17.30705pt too wide) in paragraph at lines 550--551
 []\OT1/cmr/m/n/12 Artikel zu MLP Clas-si-fier: []$\OT1/zi4/m/n/12 https : / / en . wikipedia . org / wiki / Multilayer[]
  []
 
@@ -944,35 +932,35 @@ Overfull \hbox (17.30705pt too wide) in paragraph at lines 581--582
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 585.
+Package pdftex.def Info: logo.png  used on input line 556.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[18]
+[16]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 589.
+Package pdftex.def Info: logo.png  used on input line 560.
 (pdftex.def)             Requested size: 71.13188pt x 40.90724pt.
-[19] (./main.aux)
+[17] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 52E1D2675A586A9360464BC0E379C074;2478.
+(rerunfilecheck)             Checksum: F0C26ACE4E5E8DCD6A8988EA6444F534;2330.
  ) 
 Here is how much of TeX's memory you used:
- 52350 strings out of 474662
- 1334033 string characters out of 5751109
- 2371446 words of memory out of 5000000
- 74648 multiletter control sequences out of 15000+600000
+ 52287 strings out of 474662
+ 1333158 string characters out of 5751109
+ 2352445 words of memory out of 5000000
+ 74621 multiletter control sequences out of 15000+600000
  565871 words of font info for 61 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  102i,16n,107p,819b,2102s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/felixzauner/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (20 pages, 782121 bytes).
+Output written on main.pdf (18 pages, 778286 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 152 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

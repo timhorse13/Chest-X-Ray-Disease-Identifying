@@ -214,6 +214,49 @@ def load_images(folder, label, img_size=(128, 128)):
     return X, y
 \end{lstlisting}
 
+
+In dem folgenden Code-Snippet wird gezeigt, wie der Datensatz von Kaggle heruntergeladen wurde:
+
+\begin{lstlisting}[language=Python, caption=Herunterladen des Datensatzes und Pfadzuweisung]
+# Download latest version of dataset from Kaggle
+path = kagglehub.dataset_download("muhammadrehan00
+                            /chest-xray-dataset")
+
+print("Path to dataset files:", path)
+
+\end{lstlisting}
+In dem folgenden Code-Snippet wird gezeigt, wie die Bilder in Arrays und Labels eingeteilt werden, um sie für das Training und die Evaluierung des Modells vorzubereiten:
+
+\begin{lstlisting}[language=Python, caption=Einteilung der Bilder in Arrays und Labels zur weiteren Verarbeitung durch das entwickelte Modell]
+# Prepare training data
+X_train, y_train = [], []
+
+# Train
+normal_X, normal_y = load_images(os.path.join(path, "train/NORMAL"), "Normal")
+pneu_X, pneu_y     = load_images(os.path.join(path, "train/PNEUMONIA"), "Pneumonia")
+tub_X, tub_y       = load_images(os.path.join(path, "train/TUBERCULOSIS"), "Tuberculosis")
+
+X_train.extend(normal_X + pneu_X + tub_X)
+y_train.extend(normal_y + pneu_y + tub_y)
+
+X_train = np.array(X_train)
+y_train = np.array(y_train)
+
+# Prepare testing data
+X_test, y_test = [], []
+
+# Test
+normal_X, normal_y = load_images(os.path.join(path, "test/NORMAL"), "Normal")
+pneu_X, pneu_y     = load_images(os.path.join(path, "test/PNEUMONIA"), "Pneumonia")
+tub_X, tub_y       = load_images(os.path.join(path, "test/TUBERCULOSIS"), "Tuberculosis")
+
+X_test.extend(normal_X + pneu_X + tub_X)
+y_test.extend(normal_y + pneu_y + tub_y)
+
+X_test = np.array(X_test)
+y_test = np.array(y_test)
+\end{lstlisting}
+
 \newpage
 
 \section{Modellauswahl und -training}
@@ -286,88 +329,14 @@ svc.fit(X_train_scaled, y_train)
     \end{lstlisting}
     
     \item SVC mit PCA Feature Extraction: \\ Der Code extrahiert HOG-Features aus den Bildern, um relevante Merkmale für die Klassifikation zu gewinnen. Diese Features werden anschließend für das Training eines Support Vector Classifiers verwendet, um die Leistung des Modells zu verbessern.
-    
-    \begin{lstlisting}[language=Python, caption=SVC mit PCA Feature Extraction]
-from skimage.feature import hog
-
-def extract_hog(images):
-    features = []
-    for img in images:
-        hog_feat = hog(
-            img,
-            orientations=9,
-            pixels_per_cell=(8, 8),
-            cells_per_block=(2, 2),
-            block_norm='L2-Hys'
-        )
-        features.append(hog_feat)
-    return np.array(features)
-    \end{lstlisting}
 \end{itemize}
 
-\newpage
-\subsection{Code-Dokumentation}
-Hier sind die während der Vorvearbeitung und dem Training verwendeten Code-Snippets dokumentiert:
-\begin{lstlisting}[language=Python, caption=Hauptlibraries]
-# Libraries importieren
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_openml
-from sklearn.model_selection import train_test_split
-from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import classification_report,
-                            confusion_matrix
-from sklearn.preprocessing import StandardScaler
-import kagglehub
-\end{lstlisting}
 
-\begin{lstlisting}[language=Python, caption=Herunterladen des Datensatzes und Pfadzuweisung]
-# Download latest version of dataset from Kaggle
-path = kagglehub.dataset_download("muhammadrehan00
-                            /chest-xray-dataset")
 
-print("Path to dataset files:", path)
 
-# Print the paths to the train and test directories
-train_dir = os.path.join(path, "chest_xray", "train")
-test_dir = os.path.join(path, "chest_xray", "test")
-print("Train directory:", train_dir)
-print("Test directory:", test_dir)
-\end{lstlisting}
-\vfill
 
-\begin{lstlisting}[language=Python, caption=Einteilung der Bilder in Arrays und Labels zur weiteren Verarbeitung durch das entwickelte Modell]
-# Prepare training data
-X_train, y_train = [], []
 
-# Train
-normal_X, normal_y = load_images(os.path.join(path, "train/NORMAL"), "Normal")
-pneu_X, pneu_y     = load_images(os.path.join(path, "train/PNEUMONIA"), "Pneumonia")
-tub_X, tub_y       = load_images(os.path.join(path, "train/TUBERCULOSIS"), "Tuberculosis")
 
-X_train.extend(normal_X + pneu_X + tub_X)
-y_train.extend(normal_y + pneu_y + tub_y)
-
-X_train = np.array(X_train)
-y_train = np.array(y_train)
-
-# Prepare testing data
-X_test, y_test = [], []
-
-# Test
-normal_X, normal_y = load_images(os.path.join(path, "test/NORMAL"), "Normal")
-pneu_X, pneu_y     = load_images(os.path.join(path, "test/PNEUMONIA"), "Pneumonia")
-tub_X, tub_y       = load_images(os.path.join(path, "test/TUBERCULOSIS"), "Tuberculosis")
-
-X_test.extend(normal_X + pneu_X + tub_X)
-y_test.extend(normal_y + pneu_y + tub_y)
-
-X_test = np.array(X_test)
-y_test = np.array(y_test)
-\end{lstlisting}
-
-\newpage
 \subsection{Probleme und Herausforderungen}
 Die Ergebnisse sowohl bei MLP Classifier als auch bei SVM waren in unserem Fall unzureichend, mit einem F1 Score von nur etwa 0,7. Dies könnte auf verschiedene Faktoren zurückzuführen sein, darunter die Komplexität der Bilder, die begrenzte Größe des Datensatzes oder die Wahl der Modelle und Hyperparameter. \\
 Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu verwenden, da diese Modelle speziell für die Verarbeitung von Bilddaten entwickelt wurden und in der Regel bessere Ergebnisse bei der Bildklassifikation erzielen.
@@ -580,6 +549,8 @@ Insgesamt bietet dieses Projekt jedoch wertvolle Einblicke in die Herausforderun
     \item Kaggle Datensatz: \url{https://www.kaggle.com/datasets/muhammadrehan00/chest-xray-dataset}
     \item Artikel zu MLP Classifier: \url{https://en.wikipedia.org/wiki/Multilayer_perceptron}
     \item Artikel zu SVM: \url{https://en.wikipedia.org/wiki/Support_vector_machine}
+    \item ROC Curve Erklärung: \url{https://en.wikipedia.org/wiki/Receiver_operating_characteristic}
+    \item Chat GPT \textit{OpenAI} \url{https://chatgpt.com/}
 \end{itemize}
 
 \newpage
