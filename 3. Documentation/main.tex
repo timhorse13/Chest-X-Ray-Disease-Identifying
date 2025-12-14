@@ -352,6 +352,41 @@ Es wäre sinnvoll, in unserem Fall ein CNN (Convolutional Neural Network) zu ver
 \newpage
 
 \section{Evaluation des Modells}
+Die Evaluation der Modelle erfolgte anhand verschiedener Metriken, darunter Genauigkeit, Präzision, Recall und F1-Score. Zusätzlich wurden Konfusionsmatrizen erstellt, um die Leistung der Modelle visuell darzustellen.
+\begin{lstlisting}[language=Python, caption=Evaluationscode MLP Classifier]
+# Vorhersagen auf dem Testset machen
+y_pred = mlp.predict(X_test_scaled)
+
+# Ergebnisse auswerten
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+\end{lstlisting}
+\begin{center}
+\[
+\text{Konfusionsmatrix MLP Classifier:}\quad
+\begin{bmatrix}
+680 & 139 & 106 \\
+66 & 507 & 7 \\
+366 & 3 & 695 \\
+\end{bmatrix}
+\]
+\end{center}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+& Precision & Recall & F1-score & Support \\
+\hline
+Normal & 0.61 & 0.74 & 0.67 & 925 \\
+Pneumonia & 0.78 & 0.87 & 0.83 & 580 \\
+Tuberculosis & 0.86 & 0.65 & 0.74 & 1064 \\
+\hline
+Accuracy & & & 0.72 & 2569 \\
+Macro avg & 0.75 & 0.75 & 0.74 & 2569 \\
+Weighted avg & 0.75 & 0.72 & 0.72 & 2569 \\
+\hline
+\end{tabular}
 
 \newpage
 
